@@ -4,6 +4,23 @@ window.PHOTOS={
   "02.jpg",
   "03.jpg",
   "04.jpg",
-  "05.jpg"
+  "05.jpg",
+  "ERIC4819-2.jpg",
+  "ERIC4822.jpg",
+  "ERIC4830.jpg",
+  "ERIC4833.jpg",
+  "ERIC4838.jpg",
+  "ERIC4853.jpg",
+  "ERIC4863.jpg",
+  "ERIC4869.jpg",
+  "ERIC4879.jpg",
+  "ERIC4884.jpg",
+  "ERIC4895.jpg",
+  "ERIC4899.jpg",
+  "ERIC4902-2.jpg",
+  "ERIC4905.jpg",
+  "ERIC4915.jpg",
+  "ERIC4917-2.jpg",
+  "ERIC4922.jpg"
  ]
 };
