@@ -73,3 +73,6 @@ a.tile:focus-visible{box-shadow:inset 0 0 0 3px var(--navy)}
 .ed .mv button{width:36px;height:36px;border:0;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer}
 .ed .mv button:disabled{opacity:.3;cursor:default}
 .grid.ev .tile .cov{position:relative;inset:auto;display:block;width:100%;height:auto;padding:0}
+/* discourage saving photos */
+img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.tile .cov img{pointer-events:none}
