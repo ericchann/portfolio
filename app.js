@@ -64,6 +64,9 @@ document.addEventListener('click',e=>{
  else if(a==='reset'){ord=EV.slice();saveOrd();editGrid();if(st)st.textContent='Reset to the published order.'}
  else if(a==='dl'){const l=document.createElement('a');l.href=URL.createObjectURL(new Blob([manifest()],{type:'text/javascript'}));l.download='manifest.js';l.click();URL.revokeObjectURL(l.href);if(st)st.textContent='Downloaded manifest.js.'}
  else if(a==='copy'){(navigator.clipboard?navigator.clipboard.writeText(manifest()):Promise.reject()).then(()=>{if(st)st.textContent='Copied. Paste it over photos/manifest.js in the repo.'},()=>{if(st)st.textContent='Copy failed. Use Download instead.'})}});
+/* discourage saving photos (right-click, drag, long-press); edit mode is exempt */
+document.addEventListener('contextmenu',e=>{if((e.target.tagName==='IMG'||e.target.closest('.cov'))&&location.hash!=='#edit')e.preventDefault()});
+document.addEventListener('dragstart',e=>{if(e.target.tagName==='IMG')e.preventDefault()});
 /* lightbox */
 let lbI=-1;const L=$('#lb');
 function lb(i){if(i<0&&lbI<0||!EV.length){L.hidden=true;lbI=-1;return}lbI=(i+EV.length)%EV.length;L.hidden=false;L.querySelector('img').src='photos/events/'+encodeURIComponent(EV[lbI])}
