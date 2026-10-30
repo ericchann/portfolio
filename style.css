@@ -1,3 +1,4 @@
+html,body{overflow-x:clip}
 /* Layout: faithful gallery. Fixed white bar, nav left, round logo centered, full-bleed photo grid, narrow recipe column. */
 :root{--bg:#fff;--fg:#14181d;--navy:#012b55;--muted:#546e87;--tls:38%;--tll:84%;--tfs:40%;--tfl:24%;--line:#e6eaef;--font:'Nunito Sans',system-ui,sans-serif;--script:'Yellowtail',cursive}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1118;--fg:#e8edf3;--navy:#9cc4f2;--muted:#8aa1b8;--tls:22%;--tll:22%;--tfs:40%;--tfl:86%;--line:#1c2733;color-scheme:dark}}
