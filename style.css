@@ -60,3 +60,15 @@ a.tile:focus-visible{box-shadow:inset 0 0 0 3px var(--navy)}
 .grid.ev .tile.ph:nth-child(3n+2){aspect-ratio:1/1}
 .grid.ev .tile.ph:nth-child(3n){aspect-ratio:4/5}
 .grid.ev .tile.ph:nth-child(4n){aspect-ratio:3/2}
+/* edit mode */
+.eb{max-width:760px;margin:0 auto 20px;text-align:center;color:var(--muted);font-size:15px}
+.eb code{font-size:.92em}
+.ebb{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px}
+.ebb button{font:inherit;font-weight:600;color:var(--navy);background:none;border:1.5px solid var(--navy);border-radius:999px;padding:6px 16px;cursor:pointer}
+.ebb button:hover{background:var(--navy);color:var(--bg)}
+.est{min-height:1.6em;margin:4px 0 0;text-align:center;color:var(--muted)}
+.ed{cursor:grab}.ed.drag{opacity:.35}.ed.over{outline:3px solid var(--navy);outline-offset:-3px}
+.ed .num{position:absolute;top:8px;left:8px;min-width:26px;padding:0 8px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:700;line-height:26px;text-align:center}
+.ed .mv{position:absolute;right:8px;bottom:8px;display:flex;gap:6px}
+.ed .mv button{width:36px;height:36px;border:0;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer}
+.ed .mv button:disabled{opacity:.3;cursor:default}
