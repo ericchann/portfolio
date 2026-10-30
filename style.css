@@ -49,3 +49,27 @@ a.tile:focus-visible{box-shadow:inset 0 0 0 3px var(--navy)}
 #lb img{max-width:min(94vw,1500px);max-height:88vh;object-fit:contain}
 #lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer;padding:14px;opacity:.85}#lb button:hover{opacity:1}
 #lb [data-lb=x]{top:8px;right:8px}#lb [data-lb=p]{left:4px;top:50%;transform:translateY(-50%)}#lb [data-lb=n]{right:4px;top:50%;transform:translateY(-50%)}
+/* events: masonry, photos keep their natural proportions */
+.grid.ev{display:block;column-count:4;column-gap:10px;margin:0 -16px;padding:0 10px}
+@media (max-width:1100px){.grid.ev{column-count:3}}
+@media (max-width:760px){.grid.ev{column-count:2}}
+@media (max-width:520px){.grid.ev{column-count:1}}
+.grid.ev .tile{aspect-ratio:auto;break-inside:avoid;margin:0 0 10px}
+.grid.ev .tile.has img{position:static;display:block;height:auto;object-fit:initial}
+.grid.ev .tile.ph{aspect-ratio:3/4}
+.grid.ev .tile.ph:nth-child(3n+2){aspect-ratio:1/1}
+.grid.ev .tile.ph:nth-child(3n){aspect-ratio:4/5}
+.grid.ev .tile.ph:nth-child(4n){aspect-ratio:3/2}
+/* edit mode */
+.eb{max-width:760px;margin:0 auto 20px;text-align:center;color:var(--muted);font-size:15px}
+.eb code{font-size:.92em}
+.ebb{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px}
+.ebb button{font:inherit;font-weight:600;color:var(--navy);background:none;border:1.5px solid var(--navy);border-radius:999px;padding:6px 16px;cursor:pointer}
+.ebb button:hover{background:var(--navy);color:var(--bg)}
+.est{min-height:1.6em;margin:4px 0 0;text-align:center;color:var(--muted)}
+.ed{cursor:grab}.ed.drag{opacity:.35}.ed.over{outline:3px solid var(--navy);outline-offset:-3px}
+.ed .num{position:absolute;top:8px;left:8px;min-width:26px;padding:0 8px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;font-size:13px;font-weight:700;line-height:26px;text-align:center}
+.ed .mv{position:absolute;right:8px;bottom:8px;display:flex;gap:6px}
+.ed .mv button{width:36px;height:36px;border:0;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer}
+.ed .mv button:disabled{opacity:.3;cursor:default}
+.grid.ev .tile .cov{position:relative;inset:auto;display:block;width:100%;height:auto;padding:0}
